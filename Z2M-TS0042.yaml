@@ -1,11 +1,11 @@
 blueprint:
-  name: _Zigbee2MQTT [Z2M] Tuya 2-Button Switch TS0042 ULTRA by Cabtech inspired by DJF3
+  name: Z2M Tuya 2-Button Switch TS0042 by Cabtech inspired by DJF3
   description: "Z2M blueprint for the <strong>Tuya 2-Button wireless remote switch
     TS0042</strong>.<br>  No MQTT topic or Helper needed. version 0.96: simplification
-    in blueprint text<br>  Device info: [TS0044](https://www.zigbee2mqtt.io/devices/TS0042.html)
+    in blueprint text<br>  Device info: [TS0042](https://www.zigbee2mqtt.io/devices/TS0042.html)
     \n \n       .---.---.    SUPPORTED: \n       |   |   |    - single click \n       | 1 | 2 |
     \   - double click \n       |   |   |    - long click \n       '---'---'\n"
-  author: DJ Uittenbogaard
+  author: CabaTech
   homeassistant:
     min_version: 2025.3.0
   domain: automation

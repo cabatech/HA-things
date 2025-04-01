@@ -3,8 +3,8 @@ blueprint:
   description: "Z2M blueprint for the <strong>Tuya 1-Button wireless remote switch
     TS0041</strong>.<br>  No MQTT topic or Helper needed. version 0.96: simplification
     in blueprint text<br>  Device info: [TS0041](https://www.zigbee2mqtt.io/devices/TS0041.html)
-    \n \n       .---.---.    SUPPORTED: \n       |   |   |    - single click \n       | 1 | 2 |
-    \   - double click \n       |   |   |    - long click \n       '---'---'\n"
+    \n \n       .---.---.    SUPPORTED: \n       |       |    - single click \n       |   1   |
+    \   - double click \n       |       |    - long click \n       '---'---'\n"
   author: CabaTech
   homeassistant:
     min_version: 2025.3.0

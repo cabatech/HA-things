@@ -1,10 +1,10 @@
 blueprint:
-  name: Z2M Tuya 4-Button Switch TS0044 Ultra by DJF3
+  name: Z2M Tuya 4-Button Switch TS0044 by Cabatech inspired by DJF3
   description: "Z2M blueprint for the <strong>Tuya 4-Button wireless remote switch
     TS0044</strong>.<br>  No MQTT topic or Helper needed. version 0.96: simplification
     in blueprint text<br>  Device info: [TS0044](https://www.zigbee2mqtt.io/devices/TS0044.html)
-    \n \n       .---.---.    SUPPORTED: \n       | 1 | 2 |    - single click \n       |---|---|
-    \   - double click \n       | 3 | 4 |    - long click \n       '---'---'\n"
+    \n \n       .---.---.    SUPPORTED: \n       | 4 | 3 |    - single click \n       |---|---|
+    \   - double click \n       | 1 | 2 |    - long click \n       '---'---'\n"
   author: DJ Uittenbogaard
   homeassistant:
     min_version: 2025.3.0

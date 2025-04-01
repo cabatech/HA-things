@@ -1,1 +1,252 @@
+blueprint:
+  name: Z2M Tuya 4-Button Switch TS0044 Ultra by DJF3
+  description: "Z2M blueprint for the <strong>Tuya 4-Button wireless remote switch
+    TS0044</strong>.<br>  No MQTT topic or Helper needed. version 0.96: simplification
+    in blueprint text<br>  Device info: [TS0044](https://www.zigbee2mqtt.io/devices/TS0044.html)
+    \n \n       .---.---.    SUPPORTED: \n       | 1 | 2 |    - single click \n       |---|---|
+    \   - double click \n       | 3 | 4 |    - long click \n       '---'---'\n"
+  author: DJ Uittenbogaard
+  homeassistant:
+    min_version: 2025.3.0
+  domain: automation
+  input:
+    your_remote:
+      name: Select your Tuya 4-button remote
+      description: ''
+      selector:
+        device:
+          filter:
+          - integration: mqtt
+            model: Wireless switch with 4 buttons
+          multiple: false
+    button1_section:
+      name: BUTTON 1 (top-left)
+      icon: mdi:numeric-1-box-outline
+      collapsed: true
+      input:
+        input_button1_single:
+          name: Button 1 - SINGLE click
+          description: ''
+          default: []
+          selector:
+            action: {}
+        input_button1_double:
+          name: Button 1 - DOUBLE click
+          description: ''
+          default: []
+          selector:
+            action: {}
+        input_button1_long:
+          name: Button 1 - LONG click
+          description: ''
+          default: []
+          selector:
+            action: {}
+    button2_section:
+      name: BUTTON 2 (top-right)
+      icon: mdi:numeric-2-box-outline
+      collapsed: true
+      input:
+        input_button2_single:
+          name: Button 2 - SINGLE click
+          description: ''
+          default: []
+          selector:
+            action: {}
+        input_button2_double:
+          name: Button 2 - DOUBLE click
+          description: ''
+          default: []
+          selector:
+            action: {}
+        input_button2_long:
+          name: Button 2 - LONG click
+          description: ''
+          default: []
+          selector:
+            action: {}
+    button3_section:
+      name: BUTTON 3 (bottom-left)
+      icon: mdi:numeric-3-box-outline
+      collapsed: true
+      input:
+        input_button3_single:
+          name: Button 3 - SINGLE click
+          description: ''
+          default: []
+          selector:
+            action: {}
+        input_button3_double:
+          name: Button 3 - DOUBLE click
+          description: ''
+          default: []
+          selector:
+            action: {}
+        input_button3_long:
+          name: Button 3 - LONG click
+          description: ''
+          default: []
+          selector:
+            action: {}
+    button4_section:
+      name: BUTTON 4 (bottom-right)
+      icon: mdi:numeric-4-box-outline
+      collapsed: true
+      input:
+        input_button4_single:
+          name: Button 4 - SINGLE click
+          description: ''
+          default: []
+          selector:
+            action: {}
+        input_button4_double:
+          name: Button 4 - DOUBLE click
+          description: ''
+          default: []
+          selector:
+            action: {}
+        input_button4_long:
+          name: Button 4 - LONG click
+          description: ''
+          default: []
+          selector:
+            action: {}
+  source_url: https://community.home-assistant.io/t/zigbee2mqtt-z2m-tuya-moes-4-button-switch-ts0044-djf3/866315
+mode: single
+trigger:
+- domain: mqtt
+  device_id: !input your_remote
+  type: action
+  subtype: 1_single
+  id: 1_single
+  trigger: device
+- domain: mqtt
+  device_id: !input your_remote
+  type: action
+  subtype: 1_double
+  id: 1_double
+  trigger: device
+- domain: mqtt
+  device_id: !input your_remote
+  type: action
+  subtype: 1_hold
+  id: 1_hold
+  trigger: device
+- domain: mqtt
+  device_id: !input your_remote
+  type: action
+  subtype: 2_single
+  id: 2_single
+  trigger: device
+- domain: mqtt
+  device_id: !input your_remote
+  type: action
+  subtype: 2_double
+  id: 2_double
+  trigger: device
+- domain: mqtt
+  device_id: !input your_remote
+  type: action
+  subtype: 2_hold
+  id: 2_hold
+  trigger: device
+- domain: mqtt
+  device_id: !input your_remote
+  type: action
+  subtype: 3_single
+  id: 3_single
+  trigger: device
+- domain: mqtt
+  device_id: !input your_remote
+  type: action
+  subtype: 3_double
+  id: 3_double
+  trigger: device
+- domain: mqtt
+  device_id: !input your_remote
+  type: action
+  subtype: 3_hold
+  id: 3_hold
+  trigger: device
+- domain: mqtt
+  device_id: !input your_remote
+  type: action
+  subtype: 4_single
+  id: 4_single
+  trigger: device
+- domain: mqtt
+  device_id: !input your_remote
+  type: action
+  subtype: 4_double
+  id: 4_double
+  trigger: device
+- domain: mqtt
+  device_id: !input your_remote
+  type: action
+  subtype: 4_hold
+  id: 4_hold
+  trigger: device
+conditions: []
+actions:
+- choose:
+  - conditions:
+    - condition: trigger
+      id:
+      - 1_single
+    sequence: !input input_button1_single
+  - conditions:
+    - condition: trigger
+      id:
+      - 1_double
+    sequence: !input input_button1_double
+  - conditions:
+    - condition: trigger
+      id:
+      - 1_hold
+    sequence: !input input_button1_long
+  - conditions:
+    - condition: trigger
+      id:
+      - 2_single
+    sequence: !input input_button2_single
+  - conditions:
+    - condition: trigger
+      id:
+      - 2_double
+    sequence: !input input_button2_double
+  - conditions:
+    - condition: trigger
+      id:
+      - 2_hold
+    sequence: !input input_button2_long
+  - conditions:
+    - condition: trigger
+      id:
+      - 3_single
+    sequence: !input input_button3_single
+  - conditions:
+    - condition: trigger
+      id:
+      - 3_double
+    sequence: !input input_button3_double
+  - conditions:
+    - condition: trigger
+      id:
+      - 3_hold
+    sequence: !input input_button3_long
+  - conditions:
+    - condition: trigger
+      id:
+      - 4_single
+    sequence: !input input_button4_single
+  - conditions:
+    - condition: trigger
+      id:
+      - 4_double
+    sequence: !input input_button4_double
+  - conditions:
+    - condition: trigger
+      id:
+      - 4_hold
+    sequence: !input input_button4_long
 

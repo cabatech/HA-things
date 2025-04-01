@@ -42,7 +42,7 @@ blueprint:
           default: []
           selector:
             action: {}
-  source_url: https://community.home-assistant.io/t/zigbee2mqtt-z2m-tuya-moes-4-button-switch-ts0044-djf3/866315
+  source_url: https://github.com/cabatech/HA-things/edit/main/Z2M-TS0041.yaml
 mode: single
 trigger:
 - domain: mqtt

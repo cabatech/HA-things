@@ -20,7 +20,7 @@ blueprint:
             model: Wireless switch with 4 buttons
           multiple: false
     button1_section:
-      name: BUTTON 1 (top-left)
+      name: BUTTON 1 (bottom-left)
       icon: mdi:numeric-1-box-outline
       collapsed: true
       input:
@@ -43,7 +43,7 @@ blueprint:
           selector:
             action: {}
     button2_section:
-      name: BUTTON 2 (top-right)
+      name: BUTTON 2 (bottom-right)
       icon: mdi:numeric-2-box-outline
       collapsed: true
       input:
@@ -66,7 +66,7 @@ blueprint:
           selector:
             action: {}
     button3_section:
-      name: BUTTON 3 (bottom-left)
+      name: BUTTON 3 (top-right)
       icon: mdi:numeric-3-box-outline
       collapsed: true
       input:
@@ -89,7 +89,7 @@ blueprint:
           selector:
             action: {}
     button4_section:
-      name: BUTTON 4 (bottom-right)
+      name: BUTTON 4 (top-left)
       icon: mdi:numeric-4-box-outline
       collapsed: true
       input:
